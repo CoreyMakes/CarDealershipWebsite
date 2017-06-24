@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<!-- Author: Frances Michelle Lokey
+     Class: Internet Software Development, 2375 CSIT
+     Date: August 30, 2016
+     This web page is designed to be used as a customer service survey for recent
+     customers of a car dealership. Design includes CSS branding of the survey. -->
+<head>
+<title>Mountain Ford Dealership Customer Service Survey</title>
+
+  <link rel="stylesheet" type="text/css" href="surveyCarDealershipSurvey.css">
+ <script src="Cardealership.js" type="text/javascript"></script>
+</head>
+<body>
+
+<div class="banner">
+   <h1>Mountain Ford Dealership</h1>
+   <h2> Customer Service Survey</h2>
+</div>
+
+<div class="letter">
+   <p>Dear Mr. and Mrs. Customer;<br>
+   Thank you for your recent vehicle purchase at our dealership. In an effort to provide optimal customerr service,<br>
+   we like to send out customer service surveys to recent customers to find out how we are doing. We would appreciate<br>
+   your feed back to help us provide the best customer service possible.</p>
+
+   <p>Thank you,<br><br>
+   Thomas Mann<br>
+   General Manager
+   <img src="fordemblem.jpg" alt="Ford" width= 10% height= 10%><br>
+   Mountain Ford Dealership<br>
+   </p>
+</div>
+<form name="mySurvey" action="Resultspage.html" onsubmit="return validateForm()" method="post">
+<div class="question1" id="Question1" >
+   <p>1. When were you first greeted by a staff member/sales person?<br>
+      <input type="radio" name="greet" value="1" id="car"> At your car<br>
+      <input type="radio" name="greet" value="2" id="carlot5"> First five minutes on the car lot<br>
+      <input type="radio" name="greet" value="3" id="showroom">When you entered the showroom<br>
+      <input type="radio" name="greet" value="4" id="lotawhile">After looking around the car lot for a while<br>
+      <input type="radio" name="greet" value="5" id="other">Other</p>
+    <p id="Q1"></p>
+</div>
+<div class="question2" id="salesPersonName" required>
+   <p>2. Who was your sales person?
+      <input type="text" name="salesPersonName" id="salesPersonName" required></p>
+	  <p id="Q2"></p>
+</div>
+
+<div class="question3" id"Question3">
+	<p>3. Did your sales person seem knowledgable about the vehicles you looked at?<br>
+		<input type="radio" name="knowledgable" value="1" id="unknowledgable" required>unknowledgable<br>
+		<input type="radio" name="knowledgable" value="2" id="somewhatknowledgable">somewhat knowledgable<br>
+		<input type="radio" name="knowledgable" value="3" id="knowledgable">knowledgable<br>
+		<input type="radio" name="knowledgable" value="4" id="veryknowledgable">veryknowledgable<br>
+		<input type="radio" name="knowledgable" value="5" id="expertknowledgable">expert knowledgable</p>
+	<p id="Q3"></p>
+</div>
+
+<div class="question4" id="Question4>
+   <p>4. Did we have the vehicles you were interested in looking at or test driving on our car lot?<br>
+      <input type="radio" name="selection" value="1" id="none">None<br>
+      <input type="radio" name="selection" value="2" id="one">One<br>
+      <input type="radio" name="selection" value="3" id="several">Several (2-3)<br>
+      <input type="radio" name="selection" value="4" id="many">Many (4-5)<br>
+      <input type="radio" name="selection" value="5" id="exactly">Exactly what I was looking for</p>
+	  <p id="Q4"></p>
+</div>
+
+<div class="question" id="testDrive">
+   <p>5. Were you offered a test drive?<br>
+      <select name="testdrive" id="testDrive" required>
+         <option value="unasweredtestdrive">Choose one</option>
+         <option value="yestookit">Yes, and I did test drive</option>
+         <option value="yesnogo">Yes, but I choose not to go</option>
+         <option value="no">No</option>
+      </select>
+	  <p id="Q5"></p>
+</p></div>
+
+<div class="question">
+<table>
+   <tr><td>6. How satisfied were you with...<td>
+   <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+   </tr><br>
+   <tr>
+      <td><label id="Question6A">   Your sales person</label></td>
+      <td><input type="radio" name="saleperson" value="1" id="totalsat">Totally Satisfied</td>
+      <td><input type="radio" name="saleperson" value="2" id="verysat">Very Satisfied</td>
+      <td><input type="radio" name="saleperson" value="3" id="satisfied">Satisfied </td>
+      <td><input type="radio" name="saleperson" value="4" id="somewhatDisSat">Somewhat Dissatisfied</td>
+      <td><input type="radio" name="saleperson" value="5" id="veryDisSat">Very Dissatisfied</td>
+	  <p id="Q6A"></p>
+   </tr><br>
+   <tr><td><label id="Question6B">   Your finance person</label></td>
+      <td><input type="radio" name="financeperson" value="1" id="totalsat">Totally Satisfied</td>
+      <td><input type="radio" name="financeperson" value="2" id="verysat">Very Satisfied</td>
+      <td><input type="radio" name="financeperson" value="3" id="satisfied">Satisfied</td>
+      <td><input type="radio" name="financeperson" value="4" id="somewhatDisSat">Somewhat Dissatisfied</td>
+      <td><input type="radio" name="financeperson" value="5" id="veryDisSat">Very Dissatisfied</td></tr><br>
+	  <p id="Q6B"></p>
+   <tr><td><label id="Question6C">   Overall experience</label></td>
+      <td><input type="radio" name="experience" value="1" id="totalsat">Totally Satisfied</td>
+      <td><input type="radio" name="experience" value="2" id="verysat">Very Satisfied</td>
+      <td><input type="radio" name="experience" value="3" id="satisfied">Satisfied</td>
+      <td><input type="radio" name="experience" value="4" id="somewhatDisSat">Somewhat Dissatisfied</td>
+      <td><input type="radio" name="experience" value="5" id="veryDisSat">Very Dissatisfied</td></tr><br>
+	  <p id="Q6C"></p>
+   <tr><td><label id="Question6D">   Your new vehicle</label></td>
+      <td><input type="radio" name="vehicle" id="vehicle" value="1" id="totalsat">Totally Satisfied</td>             
+      <td><input type="radio" name="vehicle" id="vehicle" value="2" id="verysat">Very Satisfied</td>         
+      <td><input type="radio" name="vehicle" id="vehicle" value="3" id="satisfied">Satisfied</td>
+      <td><input type="radio" name="vehicle" id="vehicle" value="4" id="somewhatDisSat">Somewhat Dissatisfied</td>
+      <td><input type="radio" name="vehicle" id="vehicle" value="5" id="veryDisSat">Very Dissatisfied</td></tr><br>
+	  <p id="Q6D"></p>
+</table></div>
+
+<div class="question7" id="Question7" required>
+   <p>7. What was the single most important reason for choosing our dealership for your shopping experience?<br>
+      <input type="radio" name="advertising" value="1" id="previouscust">Previous customer<br>
+      <input type="radio" name="advertising" value="2" id="referal">Recommended by someone else<br>
+      <input type="radio" name="advertising" value="3" id="location">Location<br>         
+      <input type="radio" name="advertising" value="4" id="media">TV, radio, internet, or newspaper advertising<br>
+      <input type="radio" name="advertising" value="5" id="other">Other<br>
+	  <p id="Q7"></p>
+     </p>
+</div>
+
+<div class="question8" id="waitarea" required>
+   <p>8. We try to provide customers with a pleasant experience in our showroom's waiting area.<br>
+   Please check each box in the list below in which we were successful.<br>
+      <input type="checkbox" name="waitarea1" value="1" id="clean">Clean waiting area<br>
+      <input type="checkbox" name="waitarea2" value="1" id="seating">Seating available<br>
+      <input type="checkbox" name="waitarea3" value="1" id="comfortseat">Comfortable seating<br>
+      <input type="checkbox" name="waitarea4" value="1" id="lighting">Well lite waiting area<br>
+      <input type="checkbox" name="waitarea5" value="1" id="coffee">Fresh coffee<br>
+      <input type="checkbox" name="waitarea6" value="1" id="coffeesupplies">Coffee supplies available<br>
+      <input type="checkbox" name="waitarea7" value="1" id="cleanstation">Clean drink station<br>
+      <input type="checkbox" name="waitarea8" value="1" id="cleanbathroom">Clean bathroom<br>
+      <input type="checkbox" name="waitarea9" value="1" id="bathroomsupplies">Bathroom supplies available<br>
+      <input type="checkbox" name="waitarea10" value="1" id="childarea">Clean child play area<br>
+	  <input type="checkbox" name="waitarea11" value="0" id="none">None</p>
+	  <p id="Q8"></p>
+</div>
+
+<div class="question9" id="Question9">
+   <p>9. Would you recommend our dealership?<br>
+      <select name="recommend" id="Question9">
+         <option value="0" id="select" required>Select</option>
+         <option value="2" id="yes">Yes</option>
+         <option value="0" id="no">No</option>
+         <option value="1" id="undecided">Undecided</option>
+   </select><br>
+   <textarea name="recommenddetails" rows="5" cols="50"></textarea></p>
+   <p id="Q9"></p>
+</div>
+
+<div class="question10" id="Question10">
+<p>10. Please enter your name?
+   <input type="text" name="customerName" id="customerName" required ></p>
+   <p id="Q10"></p>
+  </div>
+   
+<div class="question11" id="Question11">
+   <p>11. What could we do better? <br>
+      <textarea name="dobetter" rows="5" cols="50" required></textarea>
+	  <p id="Q11"></p>
+   </p>
+</div>
+
+<p>Thank you for taking the time to complete our survey.</p>
+
+   <button class="button" id="submitBtn" onclick="validate()"style="vertical-align:left">Submit</button>
+
+</form>
+</body>
+</html>
+
+
+
